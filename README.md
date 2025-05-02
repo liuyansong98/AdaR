@@ -3,7 +3,7 @@
 **[submit to TKDE ]** 
 
 <p align="center">
-<img src="./intro.pdf" width="800">
+<img src="./model_overview.jpg" width="800">
 </p>
 ## Authors
 
