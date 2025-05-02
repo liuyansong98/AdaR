@@ -33,7 +33,7 @@ default_weight and test_model_path need to be set according to yourself training
 
 ```python test.py -d ICEWS05_15 --pos_dim 60 --embed_dim 600 --temporal_bias 0.001 --solver euler --step_size 0.125 --bs 128 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
 
-```python test.py -d ICEWS05_15 --pos_dim 60 --embed_dim 600 --temporal_bias 0.001 --solver euler --step_size 0.125 --bs 128 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
+```python test.py -d ICEWS18 --pos_dim 60 --embed_dim 600 --temporal_bias 0.001 --solver euler --step_size 0.125 --bs 128 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
 
 ```python main.py -d GDELT --pos_dim 60 --embed_dim 600 --temporal_bias 0.001 --solver euler --step_size 0.125 --bs 512 --128 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
 
