@@ -1,13 +1,16 @@
+# AdaR: An Adaptive Temporal Knowledge Graph
+Reasoning Model with Variable Time Granularity
 
 ## Introduction
-**[submit to TKDE ]** 
+**[submit to SIGIR 2025]** 
 
 <p align="center">
 <img src="./model_overview.jpg" width="800">
 </p>
+
 ## Authors
 
-anonymity
+Yansong Liu, Rui liu, Yuan Zuo, Yong Chen, Xun Lin, Fuzhen Zhuang
 
 ## Requirements
 - numba==0.54.1
@@ -21,7 +24,6 @@ anonymity
 ## Model training
  ```./run_icews14.sh```
  ```./run_icews05-15.sh```
-  ```./run_icews18.sh```
  ```./run_gdelt.sh```
  ```./run_social_TKG.sh```
 
@@ -29,12 +31,10 @@ anonymity
 
 default_weight and test_model_path need to be set according to yourself training situation
 
-```python test.py -d ICEWS14 --pos_dim 60 --embed_dim 600 --temporal_bias 0.01 --solver euler --step_size 0.125 --bs 128 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
+```python test.py -d ICEWS14 --n_degree 64 16 4 --pos_dim 60 --embed_dim 600 --temporal_bias 0.1 --solver rk4 --step_size 0.25 --bs 512 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
 
-```python test.py -d ICEWS05_15 --pos_dim 60 --embed_dim 600 --temporal_bias 0.001 --solver euler --step_size 0.125 --bs 128 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
+```python test.py -d ICEWS05_15 --n_degree 64 16 4 --pos_dim 60 --embed_dim 600 --temporal_bias 0.01 --solver rk4 --step_size 0.25 --bs 512 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
 
-```python test.py -d ICEWS18 --pos_dim 60 --embed_dim 600 --temporal_bias 0.001 --solver euler --step_size 0.125 --bs 128 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
+```python main.py -d GDELT --n_degree 64 16 4 --pos_dim 60 --embed_dim 600 --temporal_bias 0.001 --solver rk4 --step_size 0.25 --bs 512 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
 
-```python main.py -d GDELT --pos_dim 60 --embed_dim 600 --temporal_bias 0.001 --solver euler --step_size 0.125 --bs 512 --128 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
-
-```python main.py -d social_TKG --pos_dim 60 --embed_dim 600 --temporal_bias 0.001 --solver rk4 --step_size 0.25 --bs 512 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
+```python main.py -d social_TKG --n_degree 64 16 4 --pos_dim 60 --embed_dim 600 --temporal_bias 1 --solver rk4 --step_size 0.25 --bs 512 --gpu 0 --seed 0 --default_weight 0.3 --test_model_path your_model_path```
