@@ -1,6 +1,4 @@
-# AdaR: An Adaptive Temporal Knowledge Graph
-Reasoning Model with Variable Time Granularity
-
+# AdaR: An Adaptive Temporal Knowledge Graph Reasoning Model with Variable Time Granularity
 ## Introduction
 **[submit to SIGIR 2025]** 
 
